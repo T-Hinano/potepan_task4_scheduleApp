@@ -1,6 +1,8 @@
 class AppointsController < ApplicationController
   def index
     @appoints = Appoint.all
+    @appointsCount = Appoint.count
+    @date = Date.today.to_s(:date)
   end
   
   def new
